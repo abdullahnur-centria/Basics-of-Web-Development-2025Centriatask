@@ -1,0 +1,14 @@
+/* style.css */
+
+body {
+  background-color: rgb(68, 185, 224);
+}
+
+h1 {
+  color: navy;
+  font-size: 50px;
+}
+
+p {
+  color: darkgreen;
+}
