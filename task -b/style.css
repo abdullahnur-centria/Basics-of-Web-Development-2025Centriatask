@@ -1,17 +1,34 @@
 /*
 Author: Md Abdullah Ibne Shahid Nur
-Date: 2025-09-24
+Date: 2025-09-25
 */
 
 body {
-  background-color: rgb(68, 185, 224);
+  background-color: #1772c2; /* Alice Blue */
 }
 
-h1 {
-  color: rgb(128, 87, 0);
-  font-size: 70px;
+h1, h2 {
+  color: #820052; /* Indigo */
+  font-size: 36px;
 }
 
 p {
-  color: rgb(19, 27, 19);
+  color: #2f4f4f; /* Dark Slate Gray */
+}
+
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+a {
+  color: #008b8b; /* Dark Cyan */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
