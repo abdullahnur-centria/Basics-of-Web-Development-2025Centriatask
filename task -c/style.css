@@ -3,57 +3,52 @@ Author: Md Abdullah Ibne Shahid Nur
 Date: 2025-09-27
 */
 
+img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+audio, video {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+}
+
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
     color: #333;
-    text-align: center; 
 }
-
-
-h1 {
-    color: #0056b3;
-    margin-bottom: 30px;
-}
-
-.media-section, .licensing {
-    
-    margin-top: 40px; 
-    margin-bottom: 40px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc; 
-}
-
-.media-element {
-    display: block; 
-    margin-left: auto; 
-    margin-right: auto; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd; 
-    box-shadow: 2px 2px 5px rgba(16, 2, 2, 0.1); 
-}
-
-img.media-element {
-    width: 100%; 
-    max-width: 500px; 
-    height: auto; 
-    border-radius: 8px; 
-}
-
-
-audio.media-element,
-video.media-element {
-    max-width: 100%; 
-}
-
 
 .licensing p {
-    text-align: left; 
-    max-width: 800px; 
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
+    font-size: 14px;
+    text-align: center;
 }
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
