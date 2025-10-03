@@ -1,0 +1,67 @@
+/*
+Author: Md Abdullah Ibne Shahid Nur
+Date: 2025-10-03
+*/
+
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color: purple;
+}
+
+p {
+  font-size: 20px;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#special-message {
+  font-size: 20px;
+  color: red;
+  font-style: italic;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+section ul li {
+  list-style-type: square;
+  margin: 5px;
+  font-size: 25px;
+}
+
+a[target="_blank"] {
+  color: purple;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+img[alt] {
+  border: 2px solid black;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
