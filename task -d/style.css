@@ -3,6 +3,21 @@ Author: Md Abdullah Ibne Shahid Nur
 Date: 2025-10-03
 */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
 h1 {
   color: blue;
 }
@@ -50,12 +65,16 @@ section ul li {
   list-style-type: square;
   margin: 5px;
   font-size: 25px;
+  text-align: center;
 }
 
 a[target="_blank"] {
   color: purple;
   text-decoration: underline;
   font-size: 20px;
+  display: block;
+  text-align: center;
+  margin: 10px;
 }
 
 img[alt] {
