@@ -1,0 +1,61 @@
+/*
+Author: Md Abdullah Ibne Shahid Nur
+Date: 2025-10-12
+*/
+
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #4b5563;
+  --navy: #223b70;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+
+/* Header bar */
+.site-header { background: var(--navy); color: #fff; text-align: center; padding: 20px 0; }
+.site-header h1 { margin: 0; font-size: 2rem; font-weight: 800; letter-spacing: .4px; }
+
+.content { margin-left: 8%; margin-right: 8%; padding: 24px 0 48px; }
+
+/* Cards */
+.student-info,
+.table-wrap,
+.intro,
+.other-content { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 18px; margin: 18px 0; box-shadow: 0 4px 14px rgba(2, 8, 23, 0.06); }
+.student-info p { margin: 6px 0; }
+.student-info p strong { font-weight: 700; }
+
+/* Table */
+.table-wrap { padding: 0; overflow-x: auto; }
+.table-wrap table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.table-wrap thead th { background: var(--navy); color: #fff; text-align: left; font-size: 1rem; font-weight: 700; padding: 14px 16px; border-bottom: 1px solid var(--navy); }
+.table-wrap thead th:first-child { border-top-left-radius: 8px; }
+.table-wrap thead th:last-child { border-top-right-radius: 8px; }
+.table-wrap tbody td { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.table-wrap tbody tr:nth-child(even) td { background: #f3f6ff; }
+.table-wrap tbody tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+.table-wrap tbody tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+.table-wrap tbody td:first-child { font-weight: 600; }
+
+/* Emoji sizing */
+.table-wrap td { font-size: 1.05rem; }
+
+/* ≤ 768px: margins 5%, show only student-info + table */
+@media (max-width: 768px) {
+  .content { margin-left: 5%; margin-right: 5%; }
+  .site-header,
+  .intro,
+  .other-content { display: none; }
+  .student-info,
+  .table-wrap { display: block; }
+}
+
+/* ≤ 640px: margins 1%, show only the table */
+@media (max-width: 640px) {
+  .content { margin-left: 1%; margin-right: 1%; }
+  .student-info { display: none; }
+}
