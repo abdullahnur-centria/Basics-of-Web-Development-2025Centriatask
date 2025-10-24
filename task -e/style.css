@@ -1,6 +1,6 @@
 /*
 Author: Md Abdullah Ibne Shahid Nur
-Date: 2025-10-12
+Date: 2025-10-24
 */
 
 :root {
@@ -10,8 +10,11 @@ Date: 2025-10-12
   --muted: #4b5563;
   --navy: #223b70;
   --border: #e5e7eb;
-  /* Table column count for width calculation */
-  --cols: 4; /* adjust to match your table's column count */
+  /* * FIX: 
+  * Table column count for width calculation. 
+  * Your table has 6 columns: Course, Mon, Tue, Wed, Thu, Fri.
+  */
+  --cols: 6; 
 }
 
 * { box-sizing: border-box; }
@@ -48,14 +51,26 @@ html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); f
 .table-wrap tbody tr:last-child td:last-child { border-bottom-right-radius: 8px; }
 .table-wrap tbody td:first-child { font-weight: 600; }
 
-/* Column widths: ensure total ≤ 100% */
+/* * FIX APPLIED:
+* The first column (Course) takes 30% of the width. 
+* The remaining 70% is split equally among the 5 day columns (14% each).
+* Total Width: 30% + (5 * 14%) = 100%. 
+*/
 .table-wrap thead th,
 .table-wrap tbody td {
-  width: calc(100% / var(--cols));
+  /* Default width for the 5 day columns: 70% / 5 = 14% */
+  width: 14%; 
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.table-wrap thead th:first-child,
+.table-wrap tbody td:first-child {
+  /* Course column width */
+  width: 30%; 
+}
+/* End of Fix */
 
 /* Emoji sizing */
 .table-wrap td { font-size: 1.05rem; }
