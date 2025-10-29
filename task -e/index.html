@@ -8,31 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="topbar">
-    <h1 class="title">Weekly Timetable</h1>
+  <header class="site-header">
+    <h1>Weekly Timetable</h1>
   </header>
 
   <main class="content">
     <!-- Student info block -->
     <section class="card student-info" aria-label="Student information">
-      <h2 class="sr-only">Student information</h2>
-      <p><strong>Student:</strong> Md Abdullah Ibne Shahid Nur</p>
-      <p><strong>Group:</strong> NITS24K</p>
+      <p><strong>Student:</strong><span class="student-name">Abdullah Ibne Shahid Nur</span></p>
+      <p><strong>Group:</strong><span class="student-group">NITS24K</span></p>
     </section>
-
-    <!-- Table card -->
-    <section class="card table-card" aria-label="Weekly timetable">
-      <h2 class="sr-only">Weekly timetable</h2>
-      <div class="table-wrap">
+    <div class="table-wrap">
         <table class="table">
-          <colgroup>
-            <col style="width:40%">
-            <col style="width:12%">
-            <col style="width:12%">
-            <col style="width:12%">
-            <col style="width:12%">
-            <col style="width:12%">
-          </colgroup>
           <thead>
             <tr>
               <th>Course</th>
@@ -46,28 +33,47 @@
           <tbody>
             <tr>
               <td>Algorithms and Data Structures</td>
-              <td>✅</td><td>✅</td><td>❌</td><td>❌</td><td>❌</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
             </tr>
             <tr>
               <td>Software Engineering</td>
-              <td>❌</td><td>❌</td><td>✅</td><td>❌</td><td>❌</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
             </tr>
             <tr>
               <td>Linux Essentials</td>
-              <td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>❌</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#10060;</td>
             </tr>
             <tr>
               <td>Fundamental of Data Communication</td>
-              <td>❌</td><td>❌</td><td>✅</td><td>✅</td><td>❌</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
+              <td>&#10060;</td>
             </tr>
             <tr>
               <td>Basics of Web Development</td>
-              <td>❌</td><td>❌</td><td>❌</td><td>✅</td><td>✅</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#10060;</td>
+              <td>&#9989;</td>
+              <td>&#9989;</td>
             </tr>
-          </tbody>
+         </tbody>
         </table>
-      </div>
-    </section>
+    </div>
   </main>
 </body>
 </html>
