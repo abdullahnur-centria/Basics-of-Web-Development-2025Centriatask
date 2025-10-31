@@ -168,7 +168,7 @@ body {
 .table thead th {
   background: var(--brand);
   color: #fff;
-  text-align: left;
+  text-align: left; /* Keep left alignment for headers for readability */
   padding: 0.75rem;
   border-bottom: 1px solid var(--border);
 }
@@ -184,26 +184,31 @@ body {
   background: var(--table-alt);
 }
 
-/* Column widths */
-.table thead th:nth-child(1),
+/* Column widths - ADJUSTED FOR EVEN GAPS */
+.table thead th:nth-child(1), /* Full Name */
 .table tbody td:nth-child(1) {
-  width: 25%; /* Adjusted for new columns */
+  width: 25%;
 }
-.table thead th:nth-child(2),
+
+.table thead th:nth-child(2), /* Email */
 .table tbody td:nth-child(2) {
-  width: 25%; /* Adjusted for new columns */
+  width: 25%;
 }
-.table thead th:nth-child(3),
+
+.table thead th:nth-child(3), /* Phone */
 .table tbody td:nth-child(3) {
-  width: 20%; /* Adjusted for new columns */
+  width: 17%; /* Slightly less for phone as numbers are shorter */
 }
-.table thead th:nth-child(4),
+
+.table thead th:nth-child(4), /* Birth Date */
 .table tbody td:nth-child(4) {
-  width: 15%; /* Adjusted for new columns */
+  width: 17%;
 }
-.table thead th:nth-child(5),
+
+.table thead th:nth-child(5), /* Timestamp */
 .table tbody td:nth-child(5) {
-  width: 15%; /* Adjusted for new columns */
+  width: 16%; /* Remaining width */
+  text-align: right; /* Often good for timestamps */
 }
 
 
