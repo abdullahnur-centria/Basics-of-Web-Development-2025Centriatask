@@ -1,6 +1,6 @@
 /*
-Author: Ville Heikkiniemi
-Date: 2025-10-06
+Author: Md Abdullah Ibne Shahid Nur
+Date: 2025-11-06
 */
 
 /* COLOR GUIDELINES
@@ -184,31 +184,16 @@ body {
   background: var(--table-alt);
 }
 
-/* Column widths - ADJUSTED FOR EVEN GAPS */
-.table thead th:nth-child(1), /* Full Name */
+/* Column widths: 40% + 12%*5 = 100% */
+.table thead th:nth-child(1),
 .table tbody td:nth-child(1) {
-  width: 25%;
+  width: 40%;
 }
 
-.table thead th:nth-child(2), /* Email */
-.table tbody td:nth-child(2) {
-  width: 25%;
-}
-
-.table thead th:nth-child(3), /* Phone */
-.table tbody td:nth-child(3) {
-  width: 17%; /* Slightly less for phone as numbers are shorter */
-}
-
-.table thead th:nth-child(4), /* Birth Date */
-.table tbody td:nth-child(4) {
-  width: 17%;
-}
-
-.table thead th:nth-child(5), /* Timestamp */
-.table tbody td:nth-child(5) {
-  width: 16%; /* Remaining width */
-  text-align: right; /* Often good for timestamps */
+.table thead th:nth-child(n+2),
+.table tbody td:nth-child(n+2) {
+  width: 12%;
+  text-align: center;
 }
 
 
