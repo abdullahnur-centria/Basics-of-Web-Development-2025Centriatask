@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body class="bg-slate-100 text-slate-900 font-sans">
+
+  <header class="site-header bg-[#273e73] text-white py-8">
+    <h1 class="text-2xl font-bold text-center">Registration Page</h1>
+  </header>
+
+  <main class="content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    
+    <div class="top-grid flex flex-col lg:flex-row gap-6 mb-6">
+      
+      <section class="student-info lg:w-[30%] bg-white border border-slate-300 rounded-lg shadow p-6" aria-label="Student information">
+        <h2 class="student-info-title text-xl font-semibold mb-4">Information</h2>
+        <p class="mb-2"><span class="student-name font-medium">Md Abdullah Ibne Shahid Nur</span></p>
+        <p><span class="student-group text-slate-600">NITS24K</span></p>
+      </section>
+
+      <section class="controls lg:w-[70%] bg-white border border-slate-300 rounded-lg shadow p-6" aria-label="Registration form">
+        <h2 class="controls-title text-xl font-semibold mb-4">Registration Form</h2>
+
+        <form id="registrationForm" novalidate>
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <div class="form-row flex items-center gap-4 mb-4">
+            <label for="fullName" class="w-1/4 font-medium text-slate-700">Full Name</label>
+            <input id="fullName" name="fullName" type="text" required placeholder="e.g., Ada Lovelace" class="flex-1 border border-slate-300 rounded-md px-3 py-2">
+          </div>
+          <p class="error-message text-red-600 text-sm -mt-2 mb-3 ml-[25%]" id="fullNameError"></p>
+
+          <div class="form-row flex items-center gap-4 mb-4">
+            <label for="email" class="w-1/4 font-medium text-slate-700">Email</label>
+            <input id="email" name="email" type="email" required placeholder="e.g., ada@example.com" class="flex-1 border border-slate-300 rounded-md px-3 py-2">
+          </div>
+          <p class="error-message text-red-600 text-sm -mt-2 mb-3 ml-[25%]" id="emailError"></p>
+
+          <div class="form-row flex items-center gap-4 mb-4">
+            <label for="phone" class="w-1/4 font-medium text-slate-700">Phone</label>
+            <input id="phone" name="phone" type="tel" required placeholder="+358 40 1234567" class="flex-1 border border-slate-300 rounded-md px-3 py-2">
+          </div>
+          <p class="error-message text-red-600 text-sm -mt-2 mb-3 ml-[25%]" id="phoneError"></p>
+
+          <div class="form-row flex items-center gap-4 mb-4">
+            <label for="birthDate" class="w-1/4 font-medium text-slate-700">Birth Date</label>
+            <input id="birthDate" name="birthDate" type="date" required class="flex-1 border border-slate-300 rounded-md px-3 py-2">
+          </div>
+          <p class="error-message text-red-600 text-sm -mt-2 mb-3 ml-[25%]" id="birthDateError"></p>
+
+          <fieldset class="days-group mt-4 mb-5 border border-dashed border-slate-300 rounded-md p-4">
+            <div class="terms-group flex items-center gap-2">
+              <label class="flex items-center gap-2 font-medium text-slate-700">
+                <input type="checkbox" id="terms" name="terms" required class="h-4 w-4 text-blue-600 border-slate-300 rounded">
+                I accept the terms and conditions.
+              </label>
+              <p class="error-message text-red-600 text-sm" id="termsError"></p>
+            </div>
+          </fieldset>
+
+          <div class="flex gap-4 mt-6 ml-[25%]">
+            <button id="submitBtn" type="submit" class="py-2 px-5 bg-slate-200 text-slate-800 font-semibold border border-slate-300 rounded-md hover:bg-slate-300">Submit</button>
+            <button id="clearBtn" type="reset" class="py-2 px-5 bg-white text-slate-700 font-semibold border border-slate-300 rounded-md hover:bg-slate-100">Clear</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <div class="table-wrap bg-white border border-slate-300 rounded-lg shadow-lg overflow-x-auto">
+      <table class="table w-full" id="registrationTable">
+        <thead class="bg-[#273e73] text-white">
+          <tr>
+            <th class="w-[40%] text-left px-4 py-3 font-semibold">Full Name</th>
+            <th class="w-[15%] text-center px-4 py-3 font-semibold">Email</th>
+            <th class="w-[15%] text-center px-4 py-3 font-semibold">Phone</th>
+            <th class="w-[15%] text-center px-4 py-3 font-semibold">Birth Date</th>
+            <th class="w-[15%] text-center px-4 py-3 font-semibold">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200">
+          </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>
