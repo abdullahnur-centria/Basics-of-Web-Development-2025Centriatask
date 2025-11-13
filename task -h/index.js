@@ -2,7 +2,6 @@
 // Author: Md Abdullah Ibne Shahid Nur
 // Date: 2025-11-13
 // Handles validation and submission for the registration form.
-// UPDATED: Matched table row styling to original screenshot's style.
 
 document.addEventListener("DOMContentLoaded", () => {
   // --- 1. Get DOM Elements ---
@@ -44,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let isValid = true;
 
     // --- 3. Validation Logic (with inlined showError) ---
-    // [VALIDATION LOGIC IS UNCHANGED... OMITTED FOR BREVITY]
     // Rule 1: Full Name (Required, at least 2 words, each >= 2 chars)
     const fullName = fullNameInput.value.trim();
     const nameWords = fullName.split(' ').filter(w => w.length > 0);
