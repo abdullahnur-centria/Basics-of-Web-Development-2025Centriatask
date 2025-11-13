@@ -1,6 +1,6 @@
 // index.js
 // Author: Md Abdullah Ibne Shahid Nur
-// Date: 2025-11-06
+// Date: 2025-11-13
 // Handles validation and submission for the registration form.
 // UPDATED: Matched table row styling to original screenshot's style.
 
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       const bdateObj = new Date(birthDate);
       const today = new Date();
-      today.setHours(0, 0, 0, 0); 
+      today.setHours(0, 0, 0, 0);
 
       if (bdateObj > today) {
         birthDateError.textContent = "Birth date cannot be in the future.";
@@ -141,13 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
       };
 
       const row = document.createElement("tr");
-      // ** CHANGE HERE **: Matches the light blue/white stripe from original CSS
       row.className = "even:bg-blue-100"; // 'bg-blue-100' is a light blue
 
       const formattedDate = new Date(data.timestamp).toLocaleString('en-GB');
 
-      // Add Tailwind classes for padding and alignment
-      
+
       const cell1 = document.createElement("td");
       cell1.textContent = data.fullName;
       cell1.className = "px-4 py-3 text-left"; // Align left
@@ -162,12 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cell3.textContent = data.phone;
       cell3.className = "px-4 py-3 text-center"; // Align center
       row.appendChild(cell3);
-      
+
       const cell4 = document.createElement("td");
       cell4.textContent = data.birthDate;
       cell4.className = "px-4 py-3 text-center"; // Align center
       row.appendChild(cell4);
-      
+
       const cell5 = document.createElement("td");
       cell5.textContent = formattedDate;
       cell5.className = "px-4 py-3 text-center"; // Align center
