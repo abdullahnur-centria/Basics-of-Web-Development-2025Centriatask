@@ -1,4 +1,7 @@
-/* Reset & Base Styles */
+/* Reset & Base Styles
+Author: Md Abdullah Ibne Shahid Nur
+Date: 2025-11-19 */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,8 @@ body {
   min-height: 100vh;
 }
 
-header, footer {
+header,
+footer {
   background-color: #ffb703;
   color: #000;
   text-align: center;
