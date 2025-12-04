@@ -1,11 +1,5 @@
 // Author: Md Abdullah Ibne Shahid Nur
-// Date: 2025-12-04
-
-// Function to handle the "See Available Rentals" button click (not required now, kept for reference)
-function viewRentals() {
-  alert("Redirecting to rental options...");
-  // In production: window.location.href = "/catalog.html";
-}
+// Date: 2025-11-24
 
 // Optional enhancement
 function scrollToExample() {
@@ -14,8 +8,6 @@ function scrollToExample() {
     exampleSection.scrollIntoView({ behavior: "smooth" });
   }
 }
-
-// --- Order form helpers ---
 
 document.addEventListener("DOMContentLoaded", () => {
   // Set minimum date for rental start/end to today
@@ -30,14 +22,20 @@ document.addEventListener("DOMContentLoaded", () => {
     endDateInput.min = today;
   }
 
-  // Simple HTML5 validation helper: highlight invalid fields on submit
   const form = document.getElementById("rentalOrderForm");
   if (form) {
     form.addEventListener("submit", (event) => {
+      // HTML5 validation
       if (!form.checkValidity()) {
         event.preventDefault();
         form.classList.add("show-errors");
+        form.reportValidity();
+        return;
       }
+
+      // Prevent real submission (no backend) and just go to thanks page
+      event.preventDefault();
+      window.location.href = "thanks.html";
     });
   }
 });
