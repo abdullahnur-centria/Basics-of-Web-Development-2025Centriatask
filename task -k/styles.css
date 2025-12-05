@@ -381,15 +381,21 @@ footer .social a:hover {
 
 .form-group-inline {
   display: flex;
-  gap: 0.5rem; 
-  flex-wrap: wrap;
+  gap: 1rem;  /* Space between fields */
+  flex-wrap: nowrap;  /* Prevent wrapping */
   margin-top: 0.25rem;
+  align-items: center;
 }
 
 .form-group-inline > div {
-  flex: 1 1 150px;
+  flex: 1;  /* Take up equal space */
+  min-width: 160px;  /* Ensure the inputs don't get too small */
 }
 
+/* Adjust input width to avoid overflowing or too wide of a gap */
+.form-group-inline input {
+  width: 100%;  /* Ensure the input fills its container */
+}
 
 .form-group input,
 .form-group select,
